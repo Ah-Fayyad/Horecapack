@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HorecaPack - تفاصيل المورد</title>
+  <link rel="stylesheet" href="../src/css/main.css">
+  <link rel="stylesheet" href="../src/css/companies.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <div class="logo-container">
+        <img src="../assets/images/logo.png" alt="HorecaPack Logo" class="logo">
+        <span>HorecaPack</span>
+      </div>
+      <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="/pages/index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+          <li><a href="/pages/list.html"><i class="fas fa-list"></i> دليل الموردين</a></li>
+          <li><a href="/pages/detail.html" class="active"><i class="fas fa-building"></i> المورد</a></li>
+          <li><a href="/pages/client.html"><i class="fas fa-box"></i> المنتجات</a></li>
+          <li><a href="/pages/login.html"><i class="fas fa-sign-in-alt"></i> تسجيل الدخول</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="company-detail">
+    <div class="container">
+      <div class="company-header">
+        <img id="companyLogo" class="company-logo" src="../assets/images/default-company.png" alt="Company Logo">
+        <div class="company-info">
+          <h1 id="companyName"></h1>
+          <div class="company-meta">
+            <span><i class="fas fa-map-marker-alt"></i> المدينة</span>
+            <span><i class="fas fa-tag"></i> التصنيف</span>
+          </div>
+        </div>
+      </div>
+      <div class="company-products">
+        <h2>المنتجات</h2>
+        <div class="products-grid" id="productsContainer"></div>
+      </div>
+      <div class="request-form">
+        <h2>إنشاء طلب عرض سعر جديد</h2>
+        <form id="rfpForm">
+          <div class="form-group">
+            <label for="category">التصنيف</label>
+            <select id="category" required>
+              <option value="">اختر التصنيف</option>
+              <option value="paper-cups">كاسات ورقية</option>
+              <option value="tissues">مناديل</option>
+              <option value="sugar">سكر</option>
+              <option value="packaging">أدوات تعبئة وتغليف</option>
+              <option value="food">مواد غذائية</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="quantity">الكمية المطلوبة</label>
+            <input type="number" id="quantity" required>
+          </div>
+          <div class="form-group">
+            <label for="notes">المواصفات أو الملاحظات</label>
+            <textarea id="notes" rows="4"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="deliveryDate">تاريخ التوصيل المتوقع</label>
+            <input type="date" id="deliveryDate" required>
+          </div>
+          <button type="submit" class="btn btn-primary">إرسال طلب عرض السعر</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="auth-footer">
+    <div class="footer-content">
+      <p>© 2023 HorecaPack. جميع الحقوق محفوظة</p>
+      <div class="footer-links">
+        <a href="/pages/privacy.html">سياسة الخصوصية</a>
+        <a href="/pages/terms.html">الشروط والأحكام</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../src/js/app.js"></script>
+  <script src="../src/js/companyDetail.js"></script>
+</body>
+</html>
